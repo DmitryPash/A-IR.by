@@ -62,14 +62,39 @@ function accordionChangesPop(screen1023) {
   }
 }
 
+// const productSliderMarkUpcatalog = $(".slider-catalog")
+//   .clone()
+//   .removeClass("slider-adaptive-none");
+// $(".product-swiper-mob-catalog").append(productSliderMarkUpcatalog);
+
+// $(".product-swiper-desc-catalog").append(productSliderMarkUpcatalog);
+
+// new Swiper(".product-swiper-desc-catalog .product-swiper ", {
+//   slidesPerView: 4,
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   spaceBetween: 24,
+//   breakpoints: {
+//     1024: {
+//       slidesPerView: 3,
+//       spaceBetween: 8,
+//     },
+//   },
+// });
 const productSliderMarkUpcatalog = $(".slider-catalog")
   .clone()
-  .removeClass("slider-adaptive-none");
-$(".product-swiper-mob-catalog").append(productSliderMarkUpcatalog);
+  .removeClass("slider-adaptive-none slider-catalog");
 
+//оборачиваем исходную разметку дивом, будем использовать для адаптива как нативный скролл
+$(".slider-catalog").wrap('<div class="product-swiper-mob-catalog"></div>');
+
+//вставляем копию разметки и навешиваем свайпер для десктопа
 $(".product-swiper-desc-catalog").append(productSliderMarkUpcatalog);
 
-new Swiper(".product-swiper-desc-catalog .product-swiper ", {
+new Swiper(".product-swiper-desc-catalog .product-swiper", {
   slidesPerView: 4,
   // Navigation arrows
   navigation: {
