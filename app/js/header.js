@@ -1,6 +1,5 @@
 
 
-
   $(function () {
     let header = $(".header"),
       headerMenu = $(".header .menu"),
@@ -8,9 +7,18 @@
       wrapperFixed = $(".wrapper"),
       footerBreackpoint = $("#footer"),
       footerHeight = $('#footer').innerHeight(),
-      headerHeight = $('header').outerHeight(true);
-      
-    
+      headerHeight = $('header').outerHeight(true),
+      headerHeightF = $('header').outerHeight(),
+      mobileSepare = $('.mobile-separ-line');
+
+
+ // separe-line в шапке 
+      mobileSepare.css('height', headerHeightF)
+     
+     window.addEventListener('resize', function() {
+      headerHeightF = $('header').outerHeight(),
+      mobileSepare.css('height', headerHeightF)
+     })
 
     $(window).scroll(function () {
       let cardBreackpointOpen = $('.card-breackpoint-open');
@@ -24,7 +32,18 @@
         var screen678 = window.matchMedia("(max-width:678px)");
         screen678.addListener(changes);
         changes(screen678);
+
+        // var screen1024 = window.matchMedia("(max-width:1024px)");
+        // screen1024.addListener(changes);
+        // changes(screen1024);
       }
+      // function changes(screen1024) {
+      //   if(screen1024.matches) {
+      //     mobileSepare.addClass('mobile-separ-height')
+      //   }else {
+
+      //   }
+      // }
       function changes(screen678) {
         if (screen678.matches) {
           cardBreackpointOpen.css({

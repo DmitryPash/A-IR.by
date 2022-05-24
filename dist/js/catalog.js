@@ -53,31 +53,17 @@ new Swiper(".product-swiper-desc-catalog .product-swiper ", {
   },
 });
 
-// Показываем/убираем кнопку "Показать х товаров"
 
-// $(function() {
-//   let catalogProductsSearch = $('#caralog_search');
-//   $(window).scroll(function() {
-//     let catalogSerachOffset = catalogProductsSearch.offset().top
-//     // console.log(window.scrollY)
-//     // console.log(catalogSerachOffset)
-//     if(catalogSerachOffset < window.scrollY) {
-//       console.log('hide')
-//     }else {
-//       console.log('see')
-//     }
-//   })
-
-// })
 
 $(document).ready(function(){
   let catalogProductsSearch = $('#catalog_search');
   let catalogProductsReniev = $('.catalog-products-reniev')
   let cardReview = $('#card_review').offset().top;
   let catalogSerachOffset = catalogProductsSearch.offset().top
+  let documentHeight = document.documentElement.clientHeight
   
   window.addEventListener('scroll',function() {
-    if(window.scrollY > catalogSerachOffset && window.scrollY < cardReview) {
+    if(window.scrollY + documentHeight > catalogSerachOffset && window.scrollY + documentHeight < cardReview) {
       catalogProductsReniev.addClass('catalog-search-open')
     }else {
       catalogProductsReniev.removeClass('catalog-search-open')

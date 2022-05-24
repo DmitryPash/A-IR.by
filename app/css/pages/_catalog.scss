@@ -912,7 +912,8 @@
     width: 100%;
   }
   &-btn-wrapper {
-    display: none;
+    display: flex;
+    opacity: 0;
     @media(max-width:1024px) {
         display: flex;
     }
@@ -1547,5 +1548,6 @@ input[type="range"]::-moz-range-thumb {
 
 // Показываем/убираем кнопку "Показать х товаров" 
 .catalog-search-open {
-  display: flex;
+  // display: flex;
+  opacity: 1;
 }

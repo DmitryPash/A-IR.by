@@ -1,5 +1,11 @@
 let arrow = document.querySelector(".main-contacts-tel-arrow");
 let numbers = document.querySelector(".main-contacts-tel-numbers");
+let mobMenu = document.querySelector('.mob-menu-tel');
+if(mobMenu) {
+  mobMenu.addEventListener('click', function() {
+    numbers.classList.toggle('numbers-open')
+  })
+}
 arrow.addEventListener("click", function () {
   if (numbers.classList.contains("numbers-open")) {
     numbers.classList.toggle("numbers-open");
@@ -13,6 +19,10 @@ if (matchMedia) {
   var screen1170 = window.matchMedia("(max-width:1170px)");
   screen1170.addListener(changes);
   changes(screen1170);
+
+  var screen1024 = window.matchMedia("(max-width:1024px)");
+  screen1024.addListener(changes1024);
+  changes1024(screen1024);
 
   var screen768 = window.matchMedia("(max-width:768px)");
   screen768.addListener(changes768);
@@ -38,6 +48,14 @@ function changes(screen1170) {
     $(".footer-top-resource").appendTo($(".footer-top-resource-container"));
     $(".footer-bottom-info").appendTo($(".footer-bottom-info-wrapper"));
     $(".footer-bottom-reit").appendTo($(".footer-bottom-reit-wrapper"));
+  }
+}
+function changes1024(screen1024) {
+  if(screen1024.matches) {
+    $(".main-contacts-tel-numbers").appendTo($(".mob-menu-tel"));
+    
+  }else {
+    $(".main-contacts-tel-numbers").appendTo($(".main-contacts-tel"));
   }
 }
 function changes450(screen450) {

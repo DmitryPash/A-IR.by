@@ -27,12 +27,25 @@
     border-radius: 0px 0px 8px 8px;
     padding: 15px 16px;
     border-top: 4px solid $colorRed;
+    @media(max-width:1024px) {
+        max-width: 100%;
+        top: 70px;
+        left: auto;
+        right: 40px;
+    }
+    @media(max-width:450px) {
+      right: 0;
+      left: 0;
+    }
   }
   &-wrap {
     margin-bottom: 18px;
     padding-bottom: 19px;
     border-bottom: 1px solid #d3d3d3;
     padding-left: 8px;
+    @media(max-width:450px) {
+      overflow-x: auto;
+    }
     .footer-bottom-socials-link {
       border: 1px solid #d3d3d3;
       margin-right: 0;
@@ -136,10 +149,11 @@
   margin-bottom: 17px;
   transition: transform 0.4s, background-color 0.2s, -webkit-transform 0.4s;
   will-change: transform;
+  z-index: 9;
   @media (max-width: 1024px) {
     padding: 11px 0;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    // overflow: hidden;
   }
   .menu {
     background: #f5f5f5;
@@ -487,8 +501,9 @@
   .mobile-separ {
     position: relative;
     display: inline-block;
-    &::after {
-      content: "";
+
+    &-line {
+     
       position: absolute;
       display: inline-block;
       width: 1px;
@@ -564,4 +579,17 @@
 .headerCard_fixed {
   box-shadow: initial;
   border-bottom: 1px solid #d3d3d3;
+}
+
+
+
+
+.main-contacts-tel-wrap::-webkit-scrollbar {
+  width: 0;
+}
+.main-contacts-tel-wrap {
+  -ms-overflow-style: none;
+}
+.main-contacts-tel-wrap {
+  overflow: -moz-scrollbars-none;
 }
