@@ -1,0 +1,98 @@
+.myorder {
+  padding: 38px 0px 88px 0px;
+  &-title {
+    font-weight: 700;
+    @include fz(32);
+    margin-bottom: 13px;
+    line-height: 1.36;
+
+    color: #000000;
+  }
+  &-subtitle {
+    font-weight: 400;
+    @include fz(16);
+    margin-bottom: 35px;
+    line-height: 1.36;
+    color: #808080;
+  }
+  &-index {
+    font-weight: 700;
+    @include fz(22);
+    margin-bottom: 26px;
+    line-height: 1.36;
+    color: #000000;
+  }
+  &-item {
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.03);
+    margin-bottom: 16px;
+
+    &-title {
+      font-weight: 700;
+      @include fz(18);
+      margin-bottom: 4px;
+      line-height: 1.36;
+      color: #000000;
+    }
+    &-send {
+      display: flex;
+      align-items: center;
+
+      &-circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      &-text {
+        font-weight: 400;
+        @include fz(14);
+        line-height: 1.36;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    &-price {
+      font-weight: 700;
+      @include fz(18);
+      line-height: 1.36;
+      color: #000000;
+    }
+  }
+}
+
+.myorder-margin-bottom {
+  margin-bottom: 56px;
+}
+.myorder-item-send-circle-blue {
+  background-color: #1a66ae;
+}
+.myorder-item-send-circle-green {
+  background-color: #559e53;
+}
+.myorder-item-send-circle-yellow {
+  background-color: #ffc100;
+}
+.myorder-item-send-circle-red {
+  background-color: #bc0000;
+}
+.myorder-border-gray {
+  border: 1px solid #d3d3d3;
+  box-shadow: none;
+}
+
+@media (max-width: 768.99px) {
+  .myorder-item {
+    padding: 16px 24px;
+  }
+
+  .myorder-item-price {
+    display: none;
+  }
+}
