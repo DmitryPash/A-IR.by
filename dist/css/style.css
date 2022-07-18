@@ -8904,6 +8904,109 @@ input[type=range]::-moz-range-thumb {
   }
 }
 
+.order-load {
+  margin-bottom: 88px;
+}
+@media (max-width: 1024.99px) {
+  .order-load .order-load {
+    margin-bottom: 40px;
+  }
+}
+.order-load-contract {
+  padding: 30px 32px 35px 30px;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+}
+.order-load-contract-text {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #000000;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+.order-load-contract-text span {
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+}
+.order-load-contract-btn {
+  cursor: pointer;
+  padding: 8px 45px;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.order-compres-item {
+  padding: 24px 0px;
+  border-top: 1px solid #d3d3d3;
+}
+.order-compres-item:last-child {
+  border-bottom: 1px solid #d3d3d3;
+}
+.order-compres-item-picture {
+  margin-right: 24px;
+}
+.order-compres-item-picture img {
+  width: 112px;
+  height: 112px;
+}
+.order-compres-item-desc {
+  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #000000;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.order-compres-item-desc span {
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #808080;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.order-compres-item-numb {
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+.order-compres-item-price {
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+}
+.order-compres-item-btn {
+  cursor: pointer;
+  padding: 8px 45px;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.6;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
 .card-release {
   margin-bottom: 32px;
   -webkit-box-align: start;
@@ -9123,107 +9226,6 @@ input[type=range]::-moz-range-thumb {
     border-radius: 5px;
     margin-top: 9px;
   }
-}
-.card-info .order-load {
-  margin-bottom: 88px;
-}
-@media (max-width: 1024.99px) {
-  .card-info .order-load .order-load {
-    margin-bottom: 40px;
-  }
-}
-.card-info .order-load-contract {
-  padding: 30px 32px 35px 30px;
-  border: 1px solid #d3d3d3;
-  border-radius: 8px;
-}
-.card-info .order-load-contract-text {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-weight: 600;
-  font-size: 18px;
-  font-size: 1.125rem;
-  color: #000000;
-  margin-bottom: 5px;
-  line-height: 1.6;
-}
-.card-info .order-load-contract-text span {
-  font-weight: 400;
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 1.6;
-}
-.card-info .order-load-contract-btn {
-  cursor: pointer;
-  padding: 8px 45px;
-  font-weight: 600;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #000000;
-  line-height: 1.6;
-  background: #f5f5f5;
-  border-radius: 5px;
-}
-.card-info .order-compres-item {
-  padding: 24px 0px;
-  border-top: 1px solid #d3d3d3;
-}
-.card-info .order-compres-item:last-child {
-  border-bottom: 1px solid #d3d3d3;
-}
-.card-info .order-compres-item-picture {
-  margin-right: 24px;
-}
-.card-info .order-compres-item-picture img {
-  width: 112px;
-  height: 112px;
-}
-.card-info .order-compres-item-desc {
-  font-weight: 600;
-  font-size: 18px;
-  font-size: 1.125rem;
-  color: #000000;
-  line-height: 1.6;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.card-info .order-compres-item-desc span {
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #808080;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-.card-info .order-compres-item-numb {
-  font-weight: 400;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #000000;
-  line-height: 1.6;
-}
-.card-info .order-compres-item-price {
-  font-weight: 600;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #000000;
-  line-height: 1.6;
-}
-.card-info .order-compres-item-btn {
-  cursor: pointer;
-  padding: 8px 45px;
-  font-weight: 600;
-  font-size: 16px;
-  font-size: 1rem;
-  color: #000000;
-  line-height: 1.6;
-  background: #f5f5f5;
-  border-radius: 5px;
 }
 @media (max-width: 1024.99px) {
   .card-info .card-payment-blockright {
