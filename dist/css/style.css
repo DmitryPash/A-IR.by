@@ -8893,7 +8893,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 .order-card {
-  padding: 30px 32px 35px 30px;
+  padding: 30px 30px 35px 30px;
   border: 1px solid #d3d3d3;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -8901,6 +8901,7 @@ input[type=range]::-moz-range-thumb {
 @media (max-width: 1024.99px) {
   .order-card .order-card {
     padding: 0;
+    padding: 30px 0px 35px 0px;
   }
 }
 
@@ -9154,6 +9155,7 @@ input[type=range]::-moz-range-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 .card-info-question {
   font-weight: 400;
