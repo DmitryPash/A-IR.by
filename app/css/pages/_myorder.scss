@@ -1,13 +1,14 @@
 .myorder {
   padding: 38px 0px 88px 0px;
+
   &-title {
     font-weight: 700;
     @include fz(32);
     margin-bottom: 13px;
     line-height: 1.36;
-
     color: #000000;
   }
+
   &-subtitle {
     font-weight: 400;
     @include fz(16);
@@ -15,6 +16,7 @@
     line-height: 1.36;
     color: #808080;
   }
+
   &-index {
     font-weight: 700;
     @include fz(22);
@@ -22,6 +24,7 @@
     line-height: 1.36;
     color: #000000;
   }
+
   &-item {
     padding: 16px 32px;
     display: flex;
@@ -33,6 +36,9 @@
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.03);
     margin-bottom: 16px;
+    @media (max-width: 768.99px) {
+      padding: 16px 24px;
+    }
 
     &-title {
       font-weight: 700;
@@ -41,6 +47,7 @@
       line-height: 1.36;
       color: #000000;
     }
+
     &-send {
       display: flex;
       align-items: center;
@@ -58,15 +65,19 @@
         color: rgba(0, 0, 0, 0.5);
       }
     }
+
     &-price {
       font-weight: 700;
       @include fz(18);
       line-height: 1.36;
       color: #000000;
+
+      @media (max-width: 768.99px) {
+        display: none;
+      }
     }
   }
 }
-
 .myorder-margin-bottom {
   margin-bottom: 56px;
 }
@@ -87,12 +98,12 @@
   box-shadow: none;
 }
 
-@media (max-width: 768.99px) {
-  .myorder-item {
-    padding: 16px 24px;
-  }
+// @media (max-width: 768.99px) {
+//   .myorder-item {
+//     padding: 16px 24px;
+//   }
 
-  .myorder-item-price {
-    display: none;
-  }
-}
+//   .myorder-item-price {
+//     display: none;
+//   }
+// }

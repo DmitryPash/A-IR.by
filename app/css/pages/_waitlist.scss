@@ -1,0 +1,141 @@
+.waitlist {
+  margin-bottom: 88px;
+  &-name {
+    margin-bottom: 32px;
+    &-title {
+      font-weight: 700;
+      @include fz(32);
+      line-height: 1.6;
+      color: #000;
+      margin-bottom: 14px;
+    }
+    &-subtitle {
+      display: inline-block;
+      font-weight: 600;
+      @include fz(14);
+      color: #fff;
+      padding: 6.5px 16px;
+      background-color: #559e53;
+      border-radius: 5px;
+    }
+  }
+  &-items {
+    &-item {
+      border: 1px solid #d3d3d3;
+      border-radius: 8px;
+      padding: 25px 32px 36px 32px;
+      margin-bottom: 16px;
+      &-content {
+        width: 100%;
+      }
+      &-img {
+        height: 112px;
+        margin-right: 25px;
+      }
+      &-icon {
+        max-height: 112px;
+      }
+      &-container {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        @media (max-width: 768.99px) {
+          display: block;
+          flex-direction: row-reverse;
+        }
+      }
+      &-block {
+        width: 100%;
+        @media (max-width: 1024.99px) {
+          flex-direction: column;
+        }
+      }
+      &-card {
+        flex-direction: column;
+        @media (max-width: 768.99px) {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+          align-items: baseline;
+        }
+      }
+      &-text {
+        // flex: 0 0 503px;
+        // max-width: 503px;
+      }
+      &-wrap {
+        flex: 0 0 328px;
+        max-width: 328px;
+        @media (max-width: 1024.99px) {
+          flex: 0 0 auto;
+        }
+      }
+      &-title {
+        font-weight: 600;
+        @include fz(18);
+        line-height: 1.6;
+        color: #000;
+        margin-bottom: 9px;
+      }
+      &-subtitle {
+        font-weight: 600;
+        @include fz(16);
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      &-number {
+        // flex: 0 0 204px;
+        // max-width: 204px;
+      }
+      &-price {
+        font-weight: 700;
+        @include fz(22);
+        line-height: 1.6;
+        color: #000;
+        // flex: 0 0 150px;
+        // max-width: 150px;
+      }
+      &-price span {
+        font-weight: 400;
+        @include fz(16);
+        line-height: 1.6;
+        color: #000;
+      }
+      &-delete {
+        font-weight: 400;
+        @include fz(14);
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 15px;
+      }
+      &-btnred {
+        margin: 0px;
+        max-width: 176px;
+      }
+      &-btn {
+        background: #f5f5f5;
+        color: #000;
+        margin: 0px 0px 24px 0px;
+        width: 179px;
+      }
+      &-btnwait {
+        font-weight: 400;
+        @include fz(14);
+        color: #1a66ae;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.waitlist-items-item-bordergreen {
+  border: 1px solid #559e53;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+.align-end {
+  align-items: end;
+}
+
+// Постановка блоков медиа запросы. Разные отступы от иконки компрессора. ссылки-ховер
