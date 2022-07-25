@@ -9286,12 +9286,37 @@ input[type=range]::-moz-range-thumb {
   padding: 25px 32px 36px 32px;
   margin-bottom: 16px;
 }
+@media (max-width: 1024.99px) {
+  .waitlist-items-item {
+    padding: 21px 32px 24px 32px;
+  }
+}
+@media (max-width: 768.99px) {
+  .waitlist-items-item {
+    padding: 16px;
+  }
+}
 .waitlist-items-item-content {
   width: 100%;
 }
+@media (max-width: 768.99px) {
+  .waitlist-items-item-content {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 .waitlist-items-item-img {
-  height: 112px;
+  height: 92px;
+  width: 112px;
   margin-right: 25px;
+}
+@media (max-width: 768.99px) {
+  .waitlist-items-item-img {
+    width: 96px;
+    height: 96px;
+    margin-right: 20px;
+  }
 }
 .waitlist-items-item-icon {
   max-height: 112px;
@@ -9303,6 +9328,11 @@ input[type=range]::-moz-range-thumb {
   width: 100%;
   gap: 20px;
 }
+@media (max-width: 1024.99px) {
+  .waitlist-items-item-container {
+    gap: 0px;
+  }
+}
 @media (max-width: 768.99px) {
   .waitlist-items-item-container {
     display: block;
@@ -9313,6 +9343,7 @@ input[type=range]::-moz-range-thumb {
   }
 }
 .waitlist-items-item-block {
+  gap: 20px;
   width: 100%;
 }
 @media (max-width: 1024.99px) {
@@ -9328,6 +9359,12 @@ input[type=range]::-moz-range-thumb {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 30px;
+}
+@media (max-width: 1024.99px) {
+  .waitlist-items-item-card {
+    padding-bottom: 0px;
+  }
 }
 @media (max-width: 768.99px) {
   .waitlist-items-item-card {
@@ -9335,12 +9372,12 @@ input[type=range]::-moz-range-thumb {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .waitlist-items-item-wrap {
@@ -9348,12 +9385,41 @@ input[type=range]::-moz-range-thumb {
       -ms-flex: 0 0 328px;
           flex: 0 0 328px;
   max-width: 328px;
+  margin-right: 112px;
+}
+@media (max-width: 1300px) {
+  .waitlist-items-item-wrap {
+    margin-right: 60px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 278px;
+            flex: 0 0 278px;
+    max-width: 278px;
+  }
+}
+@media (max-width: 1150px) {
+  .waitlist-items-item-wrap {
+    margin-right: 20px;
+  }
 }
 @media (max-width: 1024.99px) {
   .waitlist-items-item-wrap {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
+  }
+}
+@media (max-width: 768.99px) {
+  .waitlist-items-item-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-right: 0;
+    max-width: 144px;
+    margin-bottom: 10px;
   }
 }
 .waitlist-items-item-title {
@@ -9371,6 +9437,11 @@ input[type=range]::-moz-range-thumb {
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 768.99px) {
+  .waitlist-items-item-number {
+    margin-bottom: 16px;
+  }
+}
 .waitlist-items-item-price {
   font-weight: 700;
   font-size: 22px;
@@ -9386,6 +9457,8 @@ input[type=range]::-moz-range-thumb {
   color: #000;
 }
 .waitlist-items-item-delete {
+  -moz-text-align-last: right;
+       text-align-last: right;
   font-weight: 400;
   font-size: 14px;
   font-size: 0.875rem;
@@ -9393,9 +9466,21 @@ input[type=range]::-moz-range-thumb {
   color: rgba(0, 0, 0, 0.5);
   margin-bottom: 15px;
 }
+@media (max-width: 768.99px) {
+  .waitlist-items-item-delete {
+    margin: 0px;
+  }
+}
 .waitlist-items-item-btnred {
   margin: 0px;
   max-width: 176px;
+  width: 176px;
+}
+@media (max-width: 768.99px) {
+  .waitlist-items-item-btnred {
+    max-width: 84px;
+    width: 84px;
+  }
 }
 .waitlist-items-item-btn {
   background: #f5f5f5;
