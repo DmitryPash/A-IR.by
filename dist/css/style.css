@@ -8742,6 +8742,7 @@ input[type=range]::-moz-range-thumb {
   color: #000000;
 }
 .myorder-item {
+  cursor: pointer;
   padding: 16px 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8753,10 +8754,16 @@ input[type=range]::-moz-range-thumb {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 8px;
+  margin-bottom: 16px;
+}
+.myorder-item:hover {
   box-shadow: rgba(0, 0, 0, 0.08);
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.03);
-  margin-bottom: 16px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 @media (max-width: 768.99px) {
   .myorder-item {
