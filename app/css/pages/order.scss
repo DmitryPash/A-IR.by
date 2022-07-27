@@ -1,5 +1,4 @@
 .order {
-  padding: 38px 0px 72px 0px;
   &-header {
     // display: flex;
     // align-items: center;
@@ -71,27 +70,37 @@
   margin-bottom: 16px;
 
   @media (max-width: 1024.99px) {
-    .order-card {
-      padding: 0;
-      padding: 30px 0px 35px 0px;
-    }
+    padding: 0;
   }
 }
+
 .order-load {
   margin-bottom: 88px;
 
   @media (max-width: 1024.99px) {
-    .order-load {
-      margin-bottom: 40px;
-    }
+    margin-bottom: 56px;
   }
+
+  // @media (max-width: 1024.99px) {
+  //   .order-load {
+  //     margin-bottom: 40px;
+  //   }
+  // }
+
   &-contract {
     padding: 30px 32px 35px 30px;
     border: 1px solid #d3d3d3;
     border-radius: 8px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+
+    @media (max-width: 1024.99px) {
+      padding: 16px 32px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 768.99px) {
+      padding: 16px 24px;
+      margin-bottom: 16px;
+    }
     &-text {
       // display: flex;
       flex-direction: column;
@@ -120,51 +129,82 @@
   }
 }
 .order-compres {
+  margin-bottom: 88px;
+
+  @media (max-width: 1024.99px) {
+    margin-bottom: 56px;
+  }
   &-item {
-    padding: 24px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
     border-top: 1px solid #d3d3d3;
     &:last-child {
       border-bottom: 1px solid #d3d3d3;
     }
-    &-block {
+
+    @media (max-width: 768.99px) {
+      padding: 15px 0px 24px 0px;
+      align-items: flex-start;
     }
-    &-picture {
-      margin-right: 24px;
+
+    &-name {
+      align-items: center;
+      display: contents;
+
+      @media (max-width: 1024px) {
+        display: block;
+        align-items: flex-start;
+      }
     }
-    &-picture img {
-      width: 112px;
-      height: 112px;
+
+    &-text {
+      @media (max-width: 1024.99px) {
+        margin-bottom: 10px;
+      }
     }
-    &-desc {
-      font-weight: 600;
-      @include fz(18);
-      color: #000000;
-      line-height: 1.6;
-      flex-direction: column;
+
+    &-title {
+      margin-bottom: 4px;
     }
-    &-desc span {
-      font-weight: 400;
-      @include fz(16);
-      color: #808080;
-      line-height: 1.6;
-      margin-top: 10px;
+
+    &-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 768.99px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
-    &-numb {
-      font-weight: 400;
-      @include fz(16);
-      color: #000000;
-      line-height: 1.6;
+
+    &-again {
+      display: contents;
+      @media (max-width: 1024.99px) {
+        display: block;
+        text-align: end;
+      }
+
+      @media (max-width: 768.99px) {
+        text-align: start;
+      }
     }
+
     &-price {
-      font-weight: 600;
-      @include fz(16);
-      color: #000000;
-      line-height: 1.6;
-      // margin-left: 76px;
+      @media (max-width: 1024.99px) {
+        margin-bottom: 20px;
+      }
     }
-    &-btn {
+
+    &-button {
       cursor: pointer;
-      padding: 8px 45px;
+      max-width: 176px;
+      width: 100%;
+      text-align: center;
+      padding: 9px 8px;
       font-weight: 600;
       @include fz(16);
       color: #000000;
@@ -172,6 +212,41 @@
       background: #f5f5f5;
       border-radius: 5px;
     }
+
+    &-picture {
+      margin-right: 24px;
+    }
+    &-picture img {
+      width: 100%;
+      height: 100%;
+    }
+    // &-desc {
+    //   font-weight: 600;
+    //   @include fz(18);
+    //   color: #000000;
+    //   line-height: 1.6;
+    //   flex-direction: column;
+    // }
+    // &-desc span {
+    //   font-weight: 400;
+    //   @include fz(16);
+    //   color: #808080;
+    //   line-height: 1.6;
+    //   margin-top: 10px;
+    // }
+    // &-numb {
+    //   font-weight: 400;
+    //   @include fz(16);
+    //   color: #000000;
+    //   line-height: 1.6;
+    // }
+    // &-price {
+    //   font-weight: 600;
+    //   @include fz(16);
+    //   color: #000000;
+    //   line-height: 1.6;
+    //   // margin-left: 76px;
+    // }
   }
 }
 .card-release {
@@ -179,16 +254,12 @@
   align-items: flex-start;
 
   @media (max-width: 1024.99px) {
-    .card-release {
-      padding: 29px 32px 27px 37px;
-      border-bottom: 1px solid #d3d3d3;
-    }
+    padding: 29px 32px 27px 37px;
+    border-bottom: 1px solid #d3d3d3;
+    margin: 0;
   }
   @media (max-width: 768.99px) {
-    .card-release {
-      padding: 21px 24px 24px 24px;
-      border-bottom: 1px solid #d3d3d3;
-    }
+    padding: 21px 24px 24px 24px;
   }
 
   &-icon {
@@ -218,23 +289,20 @@
   align-items: flex-start;
 
   @media (max-width: 1024.99px) {
-    .card-recipient {
-      padding: 29px 32px 27px 37px;
-      border-bottom: 1px solid #d3d3d3;
-    }
+    padding: 29px 32px 27px 37px;
+    border-bottom: 1px solid #d3d3d3;
   }
   @media (max-width: 768.99px) {
-    .card-recipient {
-      padding: 21px 24px 24px 24px;
-      border-bottom: 1px solid #d3d3d3;
-    }
+    padding: 21px 24px 24px 24px;
   }
+
   &-icon {
     width: 24px;
     height: 24px;
     margin-right: 8px;
     fill: #2a4455;
   }
+
   &-content {
     &-title {
       font-weight: 600;
@@ -243,6 +311,7 @@
       line-height: 1.6;
       margin-bottom: 10px;
     }
+
     &-span {
       font-weight: 400;
       @include fz(16);
@@ -252,72 +321,145 @@
 }
 
 .card-payment {
+  padding: 0px 80px 0px 50px;
+
   @media (max-width: 1024.99px) {
-    .card-payment {
-      padding: 29px 32px 27px 37px;
-      border-bottom: 1px solid #d3d3d3;
-    }
+    padding: 29px 32px 27px 37px;
+    border-bottom: 1px solid #d3d3d3;
   }
+
   @media (max-width: 768.99px) {
-    .card-payment {
-      padding: 21px 24px 24px 24px;
-      border-bottom: 1px solid #d3d3d3;
-    }
+    padding: 21px 24px 24px 24px;
   }
-  &-blockleft {
-    // display: flex;
-    align-items: flex-start;
-  }
-  &-block {
-    &-list {
-      font-weight: 400;
-      @include fz(16);
-      color: #808080;
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-    &-list li {
-      margin-bottom: 10px;
-    }
-    &-list li:first-child {
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &-pay {
       font-weight: 600;
       @include fz(18);
       color: #000000;
       line-height: 1.6;
-      margin-bottom: 10px;
-    }
-    &-list li:last-child {
-      margin-top: 26px;
-    }
-    &-icon {
-      width: 24px;
-      height: 24px;
-      margin-right: 8px;
-      fill: #2a4455;
     }
   }
-  &-blockright {
-    padding-top: 38px;
-    &-list li {
+
+  &-container {
+    padding-left: 32px;
+
+    &-pay {
+      margin-bottom: 10px;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-top: 26px;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 768.99px) {
+        display: block;
+      }
+    }
+
+    &-leftside {
       font-weight: 400;
       @include fz(16);
-      color: #000000;
       line-height: 1.6;
-      margin-bottom: 10px;
+      color: #808080;
     }
-    &-list ul li:last-child {
-      font-weight: 600;
+
+    &-rightside {
+      font-weight: 400;
       @include fz(16);
-      color: #000000;
       line-height: 1.6;
-      margin-top: 26px;
+      color: #000000;
     }
   }
+
+  // &-blockleft {
+  //   align-items: flex-start;
+  // }
+  //   &-block {
+  //     // &-list {
+  //     //   font-weight: 400;
+  //     //   @include fz(16);
+  //     //   color: #808080;
+  //     //   line-height: 1.6;
+  //     //   margin-bottom: 10px;
+  //     // }
+
+  //     // &-list li {
+  //     //   margin-bottom: 10px;
+  //     // }
+
+  //     // &-list li:first-child {
+  //     //   font-weight: 600;
+  //     //   @include fz(18);
+  //     //   color: #000000;
+  //     //   line-height: 1.6;
+  //     //   margin-bottom: 10px;
+  //     // }
+
+  //     // &-list li:last-child {
+  //     //   margin-top: 26px;
+  //     // }
+
+  //     // &-icon {
+  //     //   width: 24px;
+  //     //   height: 24px;
+  //     //   margin-right: 8px;
+  //     //   fill: #2a4455;
+  //     // }
+  //   }
+  //   // &-blockright {
+  //   //   padding-top: 38px;
+  //   //   &-list li {
+  //   //     font-weight: 400;
+  //   //     @include fz(16);
+  //   //     color: #000000;
+  //   //     line-height: 1.6;
+  //   //     margin-bottom: 10px;
+  //   //   }
+  //   //   &-list ul li:last-child {
+  //   //     font-weight: 600;
+  //   //     @include fz(16);
+  //   //     color: #000000;
+  //   //     line-height: 1.6;
+  //   //     margin-top: 26px;
+  //   //   }
+  //   // }
+  // }
+
+  // 1. Поменять Иконки 2. Медиа запросы не работают 3.Позиционирование блоков в адаптиве
 }
+
 .card-info {
-  // display: flex;
+  display: flex;
   flex-direction: column;
-  text-align: center;
+
+  @media (max-width: 1024.99px) {
+    padding: 29px 32px 27px 37px;
+    padding-top: 20px;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768.99px) {
+    padding: 21px 24px 24px 24px;
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   &-question {
     font-weight: 400;
     @include fz(16);
@@ -325,6 +467,7 @@
     margin-bottom: 10px;
     line-height: 1.6;
   }
+
   &-comeback {
     font-weight: 400;
     @include fz(16);
@@ -332,9 +475,13 @@
     margin-bottom: 10px;
     line-height: 1.6;
   }
+
   &-repeat {
+    max-width: 176px;
+    max-height: 40px;
+    width: 100%;
     cursor: pointer;
-    padding: 8px 15px;
+    padding: 9px 8px;
     text-align: center;
     font-weight: 600;
     @include fz(16);
@@ -343,62 +490,47 @@
     background: #f5f5f5;
     border-radius: 5px;
     margin-top: 9px;
-  }
-  @media (max-width: 1024.99px) {
-    .card-info {
-      padding: 29px 32px 27px 37px;
-      padding-top: 20px;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-  }
-  @media (max-width: 768.99px) {
-    .card-info {
-      padding: 21px 24px 24px 24px;
-      padding-top: 20px;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-  }
-  @media (max-width: 576.99px) {
-    .card-info {
-      flex-direction: column;
-      align-items: center;
-    }
+
+    // @media (max-width: 768.99px) {
+    //   max-width: initial;
+    // }
   }
 
-  @media (max-width: 1024.99px) {
-    .card-payment-blockright {
-      text-align: end;
-    }
+  // @media (max-width: 576.99px) {
+  //   .card-info {
+  //     flex-direction: column;
+  //     align-items: center;
+  //   }
+  // }
 
-    .order-load-contract {
-      margin-bottom: 16px;
-    }
-  }
+  // @media (max-width: 1024.99px) {
+  //   .card-payment-blockright {
+  //     text-align: end;
+  //   }
 
-  @media (max-width: 768.99px) {
-    .order-header {
-      display: block;
-      margin-bottom: 42px;
-    }
+  //   .order-load-contract {
+  //     margin-bottom: 16px;
+  //   }
+  // }
 
-    .sent-title {
-      margin-bottom: 15px;
-    }
+  // @media (max-width: 768.99px) {
+  //   .order-header {
+  //     display: block;
+  //     margin-bottom: 42px;
+  //   }
 
-    .card-payment-blockright {
-      text-align: end;
-    }
-  }
+  //   .sent-title {
+  //     margin-bottom: 15px;
+  //   }
 
-  @media (max-width: 576.99px) {
-    .card-info-repeat {
-      width: 100%;
-    }
-  }
+  //   .card-payment-blockright {
+  //     text-align: end;
+  //   }
+  // }
+
+  // @media (max-width: 576.99px) {
+  //   .card-info-repeat {
+  //     width: 100%;
+  //   }
+  // }
 }
-
-// 1. Поменять Иконки 2. Медиа запросы не работают 3.Позиционирование блоков в адаптиве
