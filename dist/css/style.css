@@ -8844,7 +8844,21 @@ input[type=range]::-moz-range-thumb {
 }
 
 .order-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 40px;
+}
+@media (max-width: 768.99px) {
+  .order-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .arrow {
@@ -8858,13 +8872,14 @@ input[type=range]::-moz-range-thumb {
   margin-right: 32px;
 }
 @media (max-width: 768.99px) {
-  .arrow .arrow {
+  .arrow {
     width: 100%;
     margin-bottom: 26px;
     box-shadow: rgba(0, 0, 0, 0.08);
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
     border: none;
+    margin-right: 0;
   }
 }
 .arrow .order-arrow-icon {
@@ -8887,6 +8902,13 @@ input[type=range]::-moz-range-thumb {
   color: #000000;
   margin-bottom: 11px;
   line-height: 1.6;
+}
+@media (max-width: 768.99px) {
+  .sent-subtitle {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .sent-subtitle-block {
   width: 8px;

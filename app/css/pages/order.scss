@@ -1,6 +1,12 @@
 .order {
   &-header {
+    align-items: center;
     margin-bottom: 40px;
+
+    @media (max-width: 768.99px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 .arrow {
@@ -14,16 +20,16 @@
   margin-right: 32px;
 
   @media (max-width: 768.99px) {
-    .arrow {
-      width: 100%;
-      margin-bottom: 26px;
-      box-shadow: rgba(0, 0, 0, 0.08);
-      -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
-      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
-      border: none;
-    }
+    width: 100%;
+    margin-bottom: 26px;
+    box-shadow: rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-right: 0;
   }
+
   .order-arrow-icon {
     position: absolute;
     z-index: 5;
@@ -43,7 +49,12 @@
     margin-bottom: 11px;
     line-height: 1.6;
   }
+
   &-subtitle {
+    @media (max-width: 768.99px) {
+      align-items: center;
+    }
+
     &-block {
       width: 8px;
       height: 8px;
@@ -51,6 +62,7 @@
       border-radius: 50%;
       margin-right: 8px;
     }
+
     &-text {
       font-weight: 400;
       @include fz(18);
@@ -92,7 +104,6 @@
       margin-bottom: 16px;
     }
     &-text {
-      // display: flex;
       flex-direction: column;
       font-weight: 600;
       @include fz(18);
@@ -100,12 +111,14 @@
       margin-bottom: 5px;
       line-height: 1.6;
     }
+
     &-text span {
       font-weight: 400;
       @include fz(14);
       color: rgba(0, 0, 0, 0.5);
       line-height: 1.6;
     }
+
     &-btn {
       cursor: pointer;
       padding: 8px 45px;
@@ -345,62 +358,6 @@
       color: #000000;
     }
   }
-
-  // &-blockleft {
-  //   align-items: flex-start;
-  // }
-  //   &-block {
-  //     // &-list {
-  //     //   font-weight: 400;
-  //     //   @include fz(16);
-  //     //   color: #808080;
-  //     //   line-height: 1.6;
-  //     //   margin-bottom: 10px;
-  //     // }
-
-  //     // &-list li {
-  //     //   margin-bottom: 10px;
-  //     // }
-
-  //     // &-list li:first-child {
-  //     //   font-weight: 600;
-  //     //   @include fz(18);
-  //     //   color: #000000;
-  //     //   line-height: 1.6;
-  //     //   margin-bottom: 10px;
-  //     // }
-
-  //     // &-list li:last-child {
-  //     //   margin-top: 26px;
-  //     // }
-
-  //     // &-icon {
-  //     //   width: 24px;
-  //     //   height: 24px;
-  //     //   margin-right: 8px;
-  //     //   fill: #2a4455;
-  //     // }
-  //   }
-  //   // &-blockright {
-  //   //   padding-top: 38px;
-  //   //   &-list li {
-  //   //     font-weight: 400;
-  //   //     @include fz(16);
-  //   //     color: #000000;
-  //   //     line-height: 1.6;
-  //   //     margin-bottom: 10px;
-  //   //   }
-  //   //   &-list ul li:last-child {
-  //   //     font-weight: 600;
-  //   //     @include fz(16);
-  //   //     color: #000000;
-  //   //     line-height: 1.6;
-  //   //     margin-top: 26px;
-  //   //   }
-  //   // }
-  // }
-
-  // 1. Поменять Иконки 2. Медиа запросы не работают 3.Позиционирование блоков в адаптиве
 }
 
 .card-info {
@@ -453,47 +410,5 @@
     background: #f5f5f5;
     border-radius: 5px;
     margin-top: 9px;
-
-    // @media (max-width: 768.99px) {
-    //   max-width: initial;
-    // }
   }
-
-  // @media (max-width: 576.99px) {
-  //   .card-info {
-  //     flex-direction: column;
-  //     align-items: center;
-  //   }
-  // }
-
-  // @media (max-width: 1024.99px) {
-  //   .card-payment-blockright {
-  //     text-align: end;
-  //   }
-
-  //   .order-load-contract {
-  //     margin-bottom: 16px;
-  //   }
-  // }
-
-  // @media (max-width: 768.99px) {
-  //   .order-header {
-  //     display: block;
-  //     margin-bottom: 42px;
-  //   }
-
-  //   .sent-title {
-  //     margin-bottom: 15px;
-  //   }
-
-  //   .card-payment-blockright {
-  //     text-align: end;
-  //   }
-  // }
-
-  // @media (max-width: 576.99px) {
-  //   .card-info-repeat {
-  //     width: 100%;
-  //   }
-  // }
 }
