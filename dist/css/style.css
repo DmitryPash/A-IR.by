@@ -8871,6 +8871,13 @@ input[type=range]::-moz-range-thumb {
   border-radius: 5px;
   margin-right: 32px;
 }
+.arrow:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
 @media (max-width: 768.99px) {
   .arrow {
     width: 100%;
@@ -8959,6 +8966,7 @@ input[type=range]::-moz-range-thumb {
   .order-load-contract {
     padding: 16px 24px;
     margin-bottom: 16px;
+    gap: 20px;
   }
 }
 .order-load-contract-text {
@@ -8972,6 +8980,13 @@ input[type=range]::-moz-range-thumb {
   color: #000000;
   margin-bottom: 5px;
   line-height: 1.6;
+}
+@media (max-width: 370px) {
+  .order-load-contract-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 103px;
+            flex: 0 0 103px;
+  }
 }
 .order-load-contract-text span {
   font-weight: 400;
@@ -9083,6 +9098,10 @@ input[type=range]::-moz-range-thumb {
     text-align: start;
   }
 }
+.order-compres-item-price {
+  font-weight: 600;
+  line-height: 1.6;
+}
 @media (max-width: 1024.99px) {
   .order-compres-item-price {
     margin-bottom: 20px;
@@ -9189,6 +9208,11 @@ input[type=range]::-moz-range-thumb {
 .card-payment {
   padding: 0px 80px 0px 50px;
 }
+@media (max-width: 1150px) {
+  .card-payment {
+    padding: 0px 30px 0px 30px;
+  }
+}
 @media (max-width: 1024.99px) {
   .card-payment {
     padding: 29px 32px 27px 37px;
@@ -9251,11 +9275,17 @@ input[type=range]::-moz-range-thumb {
   color: #808080;
 }
 .card-payment-container-rightside {
+  text-align: end;
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
   color: #000000;
+}
+@media (max-width: 768.99px) {
+  .card-payment-container-rightside {
+    text-align: initial;
+  }
 }
 
 .card-info {
@@ -9330,6 +9360,13 @@ input[type=range]::-moz-range-thumb {
   background: #f5f5f5;
   border-radius: 5px;
   margin-top: 9px;
+}
+@media (max-width: 11250px) {
+  .card-info-repeat {
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
 }
 
 .waitlist {

@@ -19,6 +19,11 @@
   border-radius: 5px;
   margin-right: 32px;
 
+  &:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+  }
+
   @media (max-width: 768.99px) {
     width: 100%;
     margin-bottom: 26px;
@@ -102,6 +107,7 @@
     @media (max-width: 768.99px) {
       padding: 16px 24px;
       margin-bottom: 16px;
+      gap: 20px;
     }
     &-text {
       flex-direction: column;
@@ -110,6 +116,10 @@
       color: #000000;
       margin-bottom: 5px;
       line-height: 1.6;
+
+      @media (max-width: 370px) {
+        flex: 0 0 103px;
+      }
     }
 
     &-text span {
@@ -197,6 +207,8 @@
     }
 
     &-price {
+      font-weight: 600;
+      line-height: 1.6;
       @media (max-width: 1024.99px) {
         margin-bottom: 20px;
       }
@@ -299,6 +311,10 @@
 .card-payment {
   padding: 0px 80px 0px 50px;
 
+  @media (max-width: 1150px) {
+    padding: 0px 30px 0px 30px;
+  }
+
   @media (max-width: 1024.99px) {
     padding: 29px 32px 27px 37px;
     border-bottom: 1px solid #d3d3d3;
@@ -352,10 +368,15 @@
     }
 
     &-rightside {
+      text-align: end;
       font-weight: 400;
       @include fz(16);
       line-height: 1.6;
       color: #000000;
+
+      @media (max-width: 768.99px) {
+        text-align: initial;
+      }
     }
   }
 }
@@ -410,5 +431,9 @@
     background: #f5f5f5;
     border-radius: 5px;
     margin-top: 9px;
+
+    @media (max-width: 11250px) {
+      max-height: fit-content;
+    }
   }
 }
