@@ -1,0 +1,370 @@
+.basket {
+  margin-bottom: 88px;
+
+  @media (max-width: 1024.99px) {
+    margin-bottom: 56px;
+  }
+
+  &-header {
+    margin-bottom: 25px;
+  }
+
+  &-header a {
+    font-weight: 400;
+    @include fz(14);
+    line-height: 1.6;
+    color: #000000;
+
+    &:last-child {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+      color: #2a4455;
+    }
+  }
+
+  &-header span {
+    color: rgba(0, 0, 0, 0.5);
+    margin-left: 6px;
+    margin-right: 8px;
+  }
+
+  &-title {
+    font-weight: 700;
+    @include fz(40);
+    line-height: 1.6;
+    color: #000000;
+    margin-bottom: 28px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1024.99px) {
+      display: block;
+    }
+  }
+
+  &-active {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 784px;
+    margin-right: 112px;
+
+    @media (max-width: 1350px) {
+      margin-right: 70px;
+    }
+    @media (max-width: 1300px) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 1024.99px) {
+      margin: 0;
+    }
+
+    &-choose {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 19px;
+      color: #848484;
+      font-weight: 400;
+      @include fz(16);
+      line-height: 1.6;
+
+      &-radio {
+        transform: translate(0px, 3px);
+      }
+
+      &-text {
+        display: flex;
+        cursor: pointer;
+
+        &:hover {
+          color: #000000;
+        }
+      }
+      &-delete {
+        cursor: pointer;
+
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+
+    &-delete {
+      cursor: pointer;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+      margin-bottom: 32px;
+      border-top: 1px solid #d3d3d3;
+
+      @media (max-width: 768.99px) {
+        align-items: flex-start;
+        margin-bottom: 57px;
+      }
+
+      &-radio {
+        margin-right: 16px;
+      }
+
+      &-img {
+        max-width: 112px;
+        margin-right: 16px;
+      }
+
+      &-icon {
+      }
+
+      &-block {
+        display: contents;
+
+        @media (max-width: 1024.99px) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      &-grouptext {
+        flex: 0 0 376px;
+
+        @media (max-width: 1024.99px) {
+          flex: auto;
+          margin-bottom: 19px;
+        }
+      }
+      &-text {
+        font-weight: 600;
+        @include fz(18);
+        line-height: 1.6;
+        color: #000000;
+        margin-bottom: 10px;
+
+        @media (max-width: 1024.99px) {
+          flex: auto;
+        }
+      }
+      &-code {
+        font-weight: 400;
+        @include fz(16);
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &-code span {
+        font-weight: 600;
+      }
+
+      &-groupprice {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex: 0 0 200px;
+
+        @media (max-width: 1024.99px) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex: auto;
+        }
+
+        @media (max-width: 768.99px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      &-delete {
+        cursor: pointer;
+        font-weight: 400;
+        @include fz(14);
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 13px;
+
+        &:hover {
+          color: #000000;
+        }
+
+        @media (max-width: 1024.99px) {
+          display: none;
+        }
+      }
+      &-button {
+        margin-bottom: 8px;
+
+        @media (max-width: 1024.99px) {
+          margin-bottom: 0px;
+          margin-right: 25px;
+        }
+
+        @media (max-width: 768.99px) {
+          margin-bottom: 16px;
+          margin-right: 0px;
+        }
+      }
+      &-price {
+        font-weight: 700;
+        @include fz(22);
+        line-height: 1.6;
+        color: #000000;
+
+        @media (max-width: 1024.99px) {
+          display: flex;
+          flex-direction: column-reverse;
+          line-height: 1;
+        }
+
+        @media (max-width: 768.99px) {
+          display: block;
+          line-height: 1.6;
+        }
+      }
+      &-price span {
+        font-weight: 700;
+        @include fz(16);
+        line-height: 1.6;
+        text-decoration-line: line-through;
+        color: #808080;
+        margin-left: 12px;
+
+        @media (max-width: 1024.99px) {
+          margin: 0;
+        }
+
+        @media (max-width: 768.99px) {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  &-order {
+    flex: 0 0 424px;
+    max-height: 468px;
+    padding: 26px 24px 32px 24px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+
+    @media (max-width: 1024.99px) {
+      border: none;
+      box-shadow: none;
+    }
+
+    &-title {
+      font-weight: 700;
+      @include fz(28);
+      line-height: 1.6;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      &-bottom {
+        margin-bottom: 26px;
+      }
+
+      &-text {
+        font-weight: 400;
+        @include fz(16);
+        line-height: 1.6;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &-num {
+        font-weight: 700;
+        @include fz(18);
+        line-height: 1.6;
+        color: #000000;
+      }
+    }
+
+    &-summ {
+      padding: 22px 0px;
+      border-top: 1px solid #d3d3d3;
+      border-bottom: 1px solid #d3d3d3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      @include fz(18);
+      line-height: 1.6;
+      color: #000000;
+      margin-bottom: 32px;
+    }
+
+    &-summ span {
+      font-weight: 700;
+      @include fz(32);
+      line-height: 1.6;
+      color: #000000;
+    }
+
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @media (max-width: 1024.99px) {
+        flex-direction: row-reverse;
+      }
+
+      @media (max-width: 768.99px) {
+        flex-direction: column;
+      }
+    }
+    &-btn {
+      margin-bottom: 17px;
+
+      @media (max-width: 1024.99px) {
+        flex: 0 0 360px;
+        margin: 0;
+      }
+
+      @media (max-width: 768.99px) {
+        flex: auto;
+        margin-bottom: 17px;
+      }
+    }
+
+    &-btn span {
+      @media (max-width: 768.99px) {
+        display: block;
+        visibility: visible;
+      }
+    }
+    &-text {
+      font-weight: 400;
+      @include fz(14);
+      line-height: 1.6;
+      color: rgba(0, 0, 0, 0.5);
+
+      @media (max-width: 1024.99px) {
+        flex: 0 0 360px;
+      }
+
+      @media (max-width: 768.99px) {
+        flex: auto;
+      }
+    }
+  }
+}
+
+// Правая часть контента при сужении теряется
+// Radio кнопки не работают по нажатию
+// Отступы между элементами в item
+// 1024px - позиционирование icon компрессор
+// 1024px - уточнить размер icon компрессор
+// 1024px - кнопка "Удалить"
+// 1024px - border(границы) сделать на всю длину страницы, выйти из контейнера
